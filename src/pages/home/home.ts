@@ -59,7 +59,7 @@ export class HomePage {
   getUsersByName(loginName:string):any{
     this.githubService.getUserByLoginName(loginName).subscribe(
       data =>{
-        this.users = data.items;
+        this.users = data['items'];
         
       },
       error => {
